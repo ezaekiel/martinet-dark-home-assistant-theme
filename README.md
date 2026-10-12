@@ -1,2 +1,30 @@
-# martinet-dark-home-assistant-theme
-Martinet Dark theme for Home Assistant
+# Martinet Dark
+
+A dark theme for Home Assistant, using the Martinet palette for its surfaces, semantic colors, and compatible custom cards.
+
+## Contents
+
+- `martinet_dark.yaml`: the **Martinet Dark** theme definition.
+
+The file defines Home Assistant colors and the `martinet-*` variables used by compatible Martinet cards. It does not modify dashboards. A card with colors hard-coded in its YAML or CSS will not automatically change with the theme.
+
+## Installation
+
+1. Copy `martinet_dark.yaml` into the `themes/` directory of your Home Assistant configuration.
+2. Make sure themes are loaded in `configuration.yaml`:
+
+   ```yaml
+   frontend:
+     themes: !include_dir_merge_named themes
+   ```
+
+3. Reload themes from **Developer Tools → YAML → Reload themes**, or restart Home Assistant.
+4. Select **Martinet Dark** in your user profile.
+
+## Customization
+
+Edit the color values in `martinet_dark.yaml`, then reload themes. Custom cards that support them can also use the `martinet-*` variables.
+
+## License
+
+This project is licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0). It permits use, modification, and redistribution for noncommercial purposes only. See `LICENSE` for the full terms.
